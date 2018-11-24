@@ -5,7 +5,7 @@ InvMOL = 0;        %%% Reciprocal Monin-Obukhov Length (1/m), used for log profi
 
 for Stat = 1 : SimData.NbStat
     
-    fid = fopen([ProjectDir 'sensor' num2str(Stat)],'w');
+    fid = fopen([ProjectDir 'sensor' num2str(Stat) '.inp'],'w');
     fprintf(fid,'%s\t!Site name\n', ['sensor' num2str(Stat)]);
     fprintf(fid,'%i\t!Site Coordinate Flag (1=QUIC, 2=UTM, 3=Lat/Lon)\n', SiteCoordFlag);
     fprintf(fid,'%g\t!X coordinate (meters)\n', StatData.CoordX(Stat)*SimData.dx);
